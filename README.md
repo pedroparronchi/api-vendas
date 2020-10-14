@@ -3,7 +3,7 @@
 
 ## Como instalar - Backend (Laravel)
 
-• Navegue até a pasta backend<br>
+• Navegue até a pasta do projeto<br>
 • composer install<br>
 • cp .env.example .env<br>
 • Crie seu banco de dados<br>
