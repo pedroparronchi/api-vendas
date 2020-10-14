@@ -41,7 +41,6 @@
 • Rode o comando para realizar os testes já com o comando que reseta o banco: **php artisan migrate:fresh --env=testing && php artisan test**<br>
 
 ## Bugs Conhecidos
-• Após atualização do produto, retorna-se o objeto antigo dele, e não o atual com as alterações
 • Testes ainda não finalizados
 
 
