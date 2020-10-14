@@ -2,7 +2,10 @@
 
 namespace App\Exceptions;
 
+use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
+use Illuminate\Http\Response;
 
 class Handler extends ExceptionHandler
 {
@@ -33,5 +36,33 @@ class Handler extends ExceptionHandler
     public function register()
     {
         //
+    }
+
+    /**
+     * Render an exception into an HTTP response.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Throwable  $e
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Throwable
+     */
+    public function render($request, Throwable $e)
+    {
+        if ($e instanceof \Illuminate\Database\Eloquent\ModelNotFoundException) {
+            return response()->json([
+                'message' => 'Dado não encontrado'
+            ], Response::HTTP_NOT_FOUND);
+        } elseif ($e instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
+            return response()->json([
+                'message' => 'Endpoint não encontrado'
+            ], Response::HTTP_NOT_FOUND);
+        } else if ($e instanceof \Illuminate\Validation\ValidationException) {
+            return $this->convertValidationExceptionToResponse($e, $request);
+        }
+
+        return response()->json([
+            'message' => $e->getMessage()
+        ], Response::HTTP_BAD_REQUEST);
     }
 }

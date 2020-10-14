@@ -11,9 +11,12 @@
         "php": "^7.3",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
+        "geekcom/validator-docs": "^3.4",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
-        "laravel/tinker": "^2.0"
+        "laravel/passport": "^10.0",
+        "laravel/tinker": "^2.0",
+        "lucascudo/laravel-pt-br-localization": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
@@ -37,7 +40,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/functions.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
