@@ -1,61 +1,51 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Pedfarma
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## Como instalar - Backend (Laravel)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+• Navegue até a pasta backend<br>
+• composer install<br>
+• cp .env.example .env<br>
+• Crie seu banco de dados<br>
+• Substituia em .env a variável DB_DATABASE=NomeDaSuaBaseAqui<br>
+• php artisan key:generate<br>
+• php artisan migrate<br>
+• php artisan passport:install<br>>
+• php artisan storage:link<br>
+• php artisan serve<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Para conhecimento
+• Total de horas utilizadas no projeto: 8<br>
+• Aplicado de resouces para tratamento dos dados de retorno<br>
+• Aplicado Validation Request para validação dos dados<br>
+• Aplicado Mutators para manutenção dos dados na hora de inserir/exibir<br>
+• Aplicado Global Scopes para manter as querys com obrigatoriedade de condição<br>
+• Aplicado Passport para criação da autenticação<br>
+• Aplicado Jobs (Pattern Command bus) para manipular regra de negócio da venda<br>
+• AplicaNdo testes (finalizando apenas essa parte)<br>
+• First API<br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Como fazer - Testes (Ainda em desenvolvimento)***
 
-## Laravel Sponsors
+• Navegue até a pasta backend<br>
+• Clone seu arquivo .env para .env.testing (cp .env .env.testing)<br>
+• Edite os dados do seu banco teste no arquivo .env.testing <br>
+• Abra o arquivo phpunit.xml na raiz do backend <br>
+• Altere as propriedades DB_CONNECTION para seu tipo de banco de dados e DB_DATABASE para o nome do seu banco de dados<br>
+• Edite os dados do seu banco teste no arquivo .env.testing<br>
+• Inicie o servidor php artisan serve<br>
+• Rode o comando para realizar os testes já com o comando que reseta o banco: **php artisan migrate:fresh --env=testing && php artisan test**<br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Bugs Conhecidos
+• Testes ainda não finalizados
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+## Futuras implementações
+• Frontend com React + Redux
+• Deploy no heroku<br
+• Aplicação de testes unitários *(apesar do ideal ser iniciar assim, eu irei refatorar o projeto)<br>
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
