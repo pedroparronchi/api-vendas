@@ -44,8 +44,8 @@
 
 
 ## Futuras implementações
-• Frontend com React + Redux
-• Deploy no heroku<br
+• Frontend com React + Redux <br>
+• Deploy no heroku<br>
 • Aplicação de testes unitários *(apesar do ideal ser iniciar assim, eu irei refatorar o projeto)<br>
 
 
