@@ -10,7 +10,7 @@
 • Substituia em .env a variável DB_DATABASE=NomeDaSuaBaseAqui<br>
 • php artisan key:generate<br>
 • php artisan migrate<br>
-• php artisan passport:install<br>>
+• php artisan passport:install<br>
 • php artisan storage:link<br>
 • php artisan serve<br>
 
