@@ -24,6 +24,7 @@
 • Aplicado Global Scopes para manter as querys com obrigatoriedade de condição<br>
 • Aplicado Passport para criação da autenticação<br>
 • Aplicado Jobs (Pattern Command bus) para manipular regra de negócio da venda<br>
+• Criado tabela de log de histórico, para manter salvo as operações do produto<br>
 • AplicaNdo testes (finalizando apenas essa parte)<br>
 • First API<br>
 
@@ -40,6 +41,7 @@
 • Rode o comando para realizar os testes já com o comando que reseta o banco: **php artisan migrate:fresh --env=testing && php artisan test**<br>
 
 ## Bugs Conhecidos
+• Após atualização do produto, retorna-se o objeto antigo dele, e não o atual com as alterações
 • Testes ainda não finalizados
 
 
