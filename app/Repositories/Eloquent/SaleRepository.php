@@ -16,5 +16,17 @@ class SaleRepository extends BaseRepository
     {
         parent::__construct($model);
     }
-
+    
+    /**
+     * Delete data
+     *
+     * @param int $id
+     * @return Model|null
+     */
+    public function delete($id): ?bool
+    {
+        $data = $this->find($id);
+        $data->items()->delete();
+        return $data->delete($id);
+    }
 }

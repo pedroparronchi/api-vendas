@@ -69,9 +69,7 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
-        $request->merge(['user_id' => $request->user()->id]);
         $product = $this->repository->update($id, $request->except('quantity'));
-
         return response()->json(new ProductResource($product), 200);
     }
 

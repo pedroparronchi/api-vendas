@@ -78,9 +78,7 @@ abstract class AbstractPersonController extends Controller
      */
     public function update(PersonRequest $request, $id)
     {
-        $request->merge(['user_id' => $request->user()->id]);
         $person = $this->repository->update($id, $request->all());
-
         return response()->json(new PersonResource($person), 200);
     }
 

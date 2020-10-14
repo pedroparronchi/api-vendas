@@ -84,9 +84,7 @@ class SaleController extends Controller
      */
     public function update(SaleRequest $request, $id)
     {
-        $request->merge(['user_id' => $request->user()->id]);
-        $sale = $this->repository->update($id, $request->all());
-
+        $sale = $this->service->update($id, $request->all());
         return response()->json(new SaleResource($sale), 200);
     }
 
