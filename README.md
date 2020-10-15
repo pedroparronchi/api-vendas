@@ -28,16 +28,6 @@
 • First API<br>
 
 
-## Como fazer - Testes (Ainda em desenvolvimento)***
-
-• Navegue até a pasta backend<br>
-• Clone seu arquivo .env para .env.testing (cp .env .env.testing)<br>
-• Edite os dados do seu banco teste no arquivo .env.testing <br>
-• Abra o arquivo phpunit.xml na raiz do backend <br>
-• Altere as propriedades DB_CONNECTION para seu tipo de banco de dados e DB_DATABASE para o nome do seu banco de dados<br>
-• Edite os dados do seu banco teste no arquivo .env.testing<br>
-• Inicie o servidor php artisan serve<br>
-• Rode o comando para realizar os testes já com o comando que reseta o banco: **php artisan migrate:fresh --env=testing && php artisan test**<br>
 
 ## Bugs Conhecidos
 • Testes ainda não finalizados
