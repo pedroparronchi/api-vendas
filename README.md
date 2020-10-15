@@ -17,7 +17,6 @@
 
 
 ## Para conhecimento
-• Total de horas utilizadas no projeto: 8<br>
 • Aplicado de resouces para tratamento dos dados de retorno<br>
 • Aplicado Validation Request para validação dos dados<br>
 • Aplicado Mutators para manutenção dos dados na hora de inserir/exibir<br>
